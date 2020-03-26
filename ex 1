@@ -1,0 +1,57 @@
+package EXE;
+public class Animal {
+	private String Nome;
+	private int Patas;
+	private String Especie;
+	private double Peso;
+	
+	public Animal(String Nome, int Patas, String Especie, double Peso){
+		this.Nome = Nome;
+		this.Patas = Patas;
+		this.Especie = Especie;
+		this.Peso = Peso;
+	}
+	
+	public String getNome(){
+		return Nome;
+	}
+	public String setNome(String Nome){
+		return this.Nome = Nome;
+	}
+	public int getPatas(){
+		return Patas;
+	}
+	public int setPatas(int Patas){
+		return this.Patas = Patas;
+	}
+	public String getEspecie(){
+		return Especie;
+	}
+	public String setEspecie(String Especie){
+		return this.Especie = Especie;
+	}
+	public double getPeso(){
+		return Peso;
+	}
+	public double setPeso(double Peso){
+		return this.Peso = Peso;
+	}
+	
+	public void imprimir(){
+		System.out.println("Nome do animal: " + this.getNome());
+		System.out.println("Quantidade de patas: " + this.getPatas());
+		System.out.println("Especie do animal: " + this.getEspecie());
+		System.out.println("Peso do Animal: " + this.getPeso() + "kg.");
+	}
+}
+---------------------------------------------------------------------------
+package EXE;
+public class Principal {
+	public static void main(String[] args) {
+		Animal a1 = new Animal("Jady",4,"York Shire",1.0);	
+		a1.imprimir();
+		System.out.println("---------------------");
+		Animal a2 = new Animal("Kauã",4,"Chow Chow",100.0);
+		a2.imprimir();
+	}
+}
